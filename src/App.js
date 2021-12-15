@@ -72,14 +72,15 @@ function App() {
           <ElementWrap>
             <TextField label='Name' id='name' value={name} onChange={(e) => changeHandler('NAME', e)} />
           </ElementWrap>
-          <ElementWrap sx={{ width: '100%' }}>
-            <FormControl>
+          <ElementWrap >
+            <FormControl sx={{ width: '100%' }}>
               <InputLabel id="gender">Gender</InputLabel>
               <Select
                 labelId="gender"
                 id="gender"
-                value={gender || 'MALE'}
+                value={gender}
                 label="Gender"
+                fullWidth
                 onChange={(e) => changeHandler('GENDER', e)}
               >
                 <MenuItem value={'MALE'}>Male</MenuItem>
